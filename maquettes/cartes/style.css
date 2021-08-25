@@ -1,0 +1,310 @@
+body {
+  width: 90%;
+  margin: auto;
+  font-family: 'Merriweather', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+section .menilmontantImage {
+  width: 100%;
+  height: 350px;
+  margin: auto;
+}
+.menilmontantImage img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+.titre {
+  display: flex;
+
+  z-index: 1500;
+  font-size: 25px;
+  font-family: Shrikhand;
+  font-weight: normal;
+}
+.titre i {
+  padding: 5px 30px;
+
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2c2c2c;
+  cursor: pointer;
+}
+.trait{
+  position: relative;
+  width: 25px;
+  bottom: 5%;
+
+  background: #99e2d0;
+  border: 1px solid #99e2d0;
+  display:block;
+  align-self: flex-start;
+
+
+}
+
+.liste-menu {
+  height: auto;
+  margin: -140px auto;
+  background: #f3e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  position: relative;
+  border-radius: 40px 40px 0 0;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+}
+.liste-menu{
+  opacity: 0.9;
+  z-index: 1900;
+  /* text-overflow: ellipsis; */
+}
+.carte .liste {
+  
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  
+}
+
+
+.prix{
+  width: 80px;
+  height: 55px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.rideau {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 47px;
+  height: 55px;
+  background:  #99e2d0;
+  color: #f0f0f0;
+  border-radius: 0 20px 20px 0;
+  transform: translateX(79px);
+  transition: transform 1s ease-in-out;
+  
+}
+
+.prix {
+  display: flex;
+  font-size: 20px;
+  margin: 0 2px 5px;
+  
+}
+
+.carte:hover .rideau {
+  color: #f0f0f0;
+  transform: translate(5px);
+  /* animation-duration: 0.5s; */
+  
+}
+span i {
+ font-size: 20px;
+  transition: transform 0.5s 0.5s ease-in-out;
+  transform: rotate(+360deg);
+}
+.prix p {
+  transition: transform 0.5s 0.5s ease-in-out;
+ font-size: 13px;
+ font-weight: bold;
+  transform: translate(0);
+  text-overflow: ellipsis;
+}
+.carte:hover .prix p{
+  transform: translate(-15px);
+  animation-duration: 0.5s;
+}
+
+.carte:hover span i {
+  
+  transform: rotate(0);
+}
+
+.entree,
+.plat,
+.dessert {
+
+  width: 95%;
+  height: 300px;
+  
+  margin-top: 10px;
+  margin-bottom: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+  border-radius: 20px;
+ 
+ 
+}
+
+.carte:nth-child(3){
+  animation: chargement;
+  animation-duration: 1s;
+  /* animation-delay: 0s; */
+
+  
+}
+.carte:nth-child(4){
+  animation: chargement;
+  animation-duration: 1s;
+  animation-delay: .5s;
+ 
+  
+}
+.carte:nth-child(5){
+  animation: chargement;
+  animation-duration: 1s;
+  animation-delay: 1s;
+ 
+  
+}
+
+
+
+
+@keyframes chargement {
+ 0%  {opacity: 0;}
+ 
+  100% {opacity: 1;}
+}
+
+
+
+
+
+
+
+.entree,
+.plat,
+.dessert,
+h3 {
+  text-transform: uppercase;
+  align-self: flex-start;
+  font-size: 12px;
+  
+}
+
+.carte
+ {
+  
+  width: 90%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 10px 10px;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 3px auto;
+  animation-name: chargement;
+  animation-duration: 2s;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  filter: brightness(95%);
+}
+.carte:hover {
+  filter: brightness(130%);
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.liste  {
+  width: 30%;
+  display: inline-block;
+  margin: 6px 0 0 4px;
+  font-size: 11px;
+  padding: 0;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+ 
+  
+}
+.liste span {
+  padding: 2px 3px;
+  font-weight: bold;
+  font-size: 12px;
+  text-overflow: ellipsis;
+} 
+
+.btn-explorer {
+  align-self: flex-end;
+  flex-wrap: wrap;
+  position: relative;
+  
+}
+.btn-explorer button {
+  width: 180px;
+  height: 40px;
+  border-radius: 30px;
+  margin: 20px auto;
+  background:linear-gradient(to top, #ff79da, #9356dc) ;
+  color: white;
+  
+ 
+  font-size: 15px;
+  cursor: pointer;
+  border: 0 solid #f0f0f0;
+  box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+}
+
+
+.text {
+  color: hsl(324, 70%, 45%);
+  animation: wheelHueColor 100s infinite;
+}
+
+footer {
+  width: 100%;
+  margin: 140px auto 0;
+  padding: 20px 0;
+  background: #2c2c2c;
+}
+footer ul {
+  font-size: 20px;
+  list-style-type: none;
+  line-height: 1.5;
+  padding: 10px 25px;
+  margin: 0;
+  font-weight: normal;
+  color: white;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+  padding: 0 25px;
+  margin: 5px;
+  font-weight: normal;
+  font-size: 28px;
+  color: #f0f0f0;
+}
